@@ -1,0 +1,108 @@
+{
+  "name": "engines-lookup",
+  "version": "0.1.0",
+  "description": "A tool to check what engines are advised by the dependencies",
+  "author": "Aguirre Gonzalo Adolfo <gonza.a.aguirre@gmail.com> (https://github.com/gonza7aav)",
+  "license": "MIT",
+  "keywords": [
+    "semver",
+    "engines",
+    "package",
+    "package.json"
+  ],
+  "main": "dist/index.js",
+  "homepage": "https://github.com/gonza7aav/engines-lookup#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonza7aav/engines-lookup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gonza7aav/engines-lookup/issues"
+  },
+  "bin": "dist/bin/engines-lookup.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "style:check": "prettier --check ./src",
+    "style:format": "prettier --write ./src",
+    "style:lint": "eslint --color ./src",
+    "prebuild": "rm -rf dist",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "semver": "7.3.5",
+    "semver-compare-range": "0.0.3",
+    "semver-range-intersect": "0.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.18",
+    "@typescript-eslint/eslint-plugin": "5.12.0",
+    "@typescript-eslint/parser": "5.12.0",
+    "eslint": "8.9.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "16.1.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.25.4",
+    "prettier": "2.5.1",
+    "typescript": "4.5.5"
+  },
+  "engines": {
+    "npm": ">=3.0.0",
+    "node": ">=10.0.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "es2021": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module",
+      "project": "./tsconfig.json"
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "airbnb-base",
+      "airbnb-typescript/base",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "ignorePatterns": [
+      "dist/"
+    ],
+    "rules": {
+      "comma-dangle": [
+        "error",
+        "only-multiline"
+      ],
+      "function-paren-newline": "off",
+      "implicit-arrow-linebreak": "off",
+      "no-console": "off",
+      "no-underscore-dangle": "off",
+      "no-use-before-define": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/no-use-before-define": [
+        "error",
+        {
+          "functions": false
+        }
+      ]
+    }
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "endOfLine": "lf",
+    "printWidth": 80,
+    "quoteProps": "as-needed",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
+  }
+}
