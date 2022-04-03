@@ -1,6 +1,6 @@
 {
   "name": "engines-lookup",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tool to check what engines are advised by the dependencies",
   "author": "Aguirre Gonzalo Adolfo <gonza.a.aguirre@gmail.com> (https://github.com/gonza7aav)",
   "license": "MIT",
